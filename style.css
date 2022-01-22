@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+:root{
+    --hue-color: 260;
+
+    --first-color: hsl(var(--hue-color), 100%, 50%);
+    --first-color-alt: hsl(var(--hue-color), 95%, 25%);
+    --text-color: hsl(var(--hue-color), 0%, 45%);
+    --text-color-light: hsl(var(--hue-color), 10%, 99%);
+    --title-color: hsl(var(--hue-color), 0%, 35%);
+    --sidebar-color: hsl(var(--hue-color), 10%, 99%);
+    --body-color: hsl(var(--hue-color), 10%, 90%);
+    --input-color: hsl(var(--hue-color),10%, 95%);
+
+    --h1-font-size: 3.2rem;
+    --normal-font-size: 1.6rem;
+    --small-font-size: 1.4rem;
+
+    --font-weight-medium: 500;
+    --font-weight-bold: 600;
+    --font-weight-light: 400;
+    --font-weight-lighter: 300;
+
+    --mb4: 0.4rem;
+    --mb12: 1.2rem;
+    --mb16: 1.6rem;
+    --mb20: 2rem;
+    --mb24: 2.4rem;
+    --mb30: 3rem;
+    --mb36: 3.6rem;
+    --mb42: 4.2rem;
+
+}
+
+html{
+    font-size: 10px;
+
+}
+
+body{
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+
+/* navigation */
+.nav__list{
+    flex-grow: 1;
+}
+
+.nav__item{
+    padding: 1rem 1.6rem 1rem 0;
+    margin-bottom:  var(--mb12);
+    border-radius: 0.6rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+
+.nav__item-link{
+
+}
+
+.nav__item-icon{
+    font-size: 2rem;
+    padding: 0 2rem;
+}
+
+.nav__item-content{
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-weight-medium);
+    line-height: 3rem;
+    user-select: none;
+}
+
+
+
+
+/* header */
+.header{
+    width: 26rem;
+    background-color: var(--sidebar-color);
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transition: all 0.3s ease;
+
+}
+
+.header__wrap{
+    overflow: hidden;
+}
+
+.header__link{
+
+}
+
+.header__header{
+    display: flex;
+    position: relative;
+    margin-bottom: 6rem;
+}
+
+.header__header-img-wrapper{
+    width: 6.5rem;
+    padding: 0 1rem;
+    flex-shrink: 0;
+}
+
+.header__header-img{
+    padding-top: 100%;
+    background: url(./logo.png) center center / cover no-repeat;
+    border-radius: 1rem ;
+}
+
+.header__header-content{
+    color: var(--text-color);
+    flex-shrink: 0;
+}
+
+.header__header-name{
+    font-weight: var(--font-weight-bold);
+    font-size: var(--normal-font-size);
+}
+
+.header__header-subname{
+    font-size: var(--small-font-size);
+    font-weight: var(--font-weight-medium);
+}
+
+.header__search-label{
+    cursor: pointer;
+}
+
+.header__header-icon-wrap{
+    position: absolute;
+    top: 4rem;
+    right: 1.5rem;
+    transform: translate(calc(50% + 1.6rem), -50%);
+    padding: 0 0.5rem;
+    border-radius: 50%;
+    background-color: var(--first-color);
+    cursor: pointer;
+}
+
+.header__header-icon{
+    color: var(--text-color-light);
+    font-size: 2rem;
+}
+
+
+.header__search{
+    background-color: var(--input-color);
+    margin-bottom: var(--mb16);
+}
+
+.header__search-icon{
+
+}
+
+.header__search-input{
+    background-color: var(--input-color);
+    border: none;
+    outline: none;
+    min-width: 0;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+
+}
+
+/* nav */
+.header__nav-item:hover{
+    background-color: var(--first-color);
+    color: var(--text-color-light);
+
+}
+
+
+/* header control */
+.header__control{
+
+}
+
+.header__control-logout{
+    
+}
+
+.header__control-theme{
+    margin: 0;
+    background-color: var(--input-color)
+}
+
+.header__icon-dark{
+    display: none;
+}
+
+body.dark-mode .header__icon-dark{
+    display: block;
+}
+
+.header__icon-light{
+    display: block;
+}
+
+body.dark-mode .header__icon-light{
+    display: none;
+}
+
+.header__control-theme-text{
+    flex-shrink: 0;
+}
+
+.theme__btn{
+    width: 3rem;
+    background-color: var(--text-color);
+    height: var(--normal-font-size);
+    border-radius: 0.8rem;
+    margin-left: auto;
+}
+
+.theme__btn-thum{
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: var(--input-color);
+    margin: 0.2rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .theme__btn-thum{
+    margin-left: auto;
+}
+
+.content{
+    margin-left: 26rem;
+    transition: all 0.3s ease;
+}
+
+.content-text{
+    padding: 4rem
+}
+
+
+
+
+/* dark mode */
+body.dark-mode{
+    --first-color: hsl(var(--hue-color), 100%, 50%);
+    --first-color-alt: hsl(var(--hue-color), 95%, 25%);
+    --text-color: hsl(var(--hue-color), 0%, 85%);
+    --title-color: hsl(var(--hue-color), 0%, 35%);
+    --sidebar-color: hsl(var(--hue-color), 0%, 20%);
+    --body-color: hsl(var(--hue-color), 0%, 10%);
+    --input-color: hsl(var(--hue-color),0%, 40%);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
