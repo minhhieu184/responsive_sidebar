@@ -17,9 +17,16 @@ toggleThemeBtn.addEventListener('click', () => {
 const sidebarBtn = $('.header__header-icon-wrap')
 const header = $('.header')
 const headerSearch = $('.header__search')
+const headerSearchIcon = $('.header__header-icon')
 
 sidebarBtn.addEventListener('click', () => {
-    header.style.width === '9.3rem' ? header.style.width = '26rem' : header.style.width = '9.3rem'
+    if (header.style.width === '9.3rem'){
+        header.style.width = '26rem' 
+        headerSearchIcon.style.transform = 'rotateY(0)'
+    } else {
+        header.style.width = '9.3rem'
+        headerSearchIcon.style.transform = 'rotateY(180deg)'
+    }
     $('.content').style.marginLeft = header.style.width
 })
 
